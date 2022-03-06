@@ -1,0 +1,8 @@
+query bookmark($_id: String!) {
+  bookmark(_id: $_id) {
+    _id
+    name
+    userId
+    links
+  }
+}

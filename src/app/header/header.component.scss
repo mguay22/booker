@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}

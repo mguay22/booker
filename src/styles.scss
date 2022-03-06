@@ -1,1 +1,28 @@
+@import "../node_modules/@angular/material/theming";
+
+@include mat-core();
+
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// Define a theme.
+$primary: mat-palette($mat-indigo);
+$accent: mat-palette($mat-pink, A200, A100, A400);
+
+a {
+  color: mat-color($accent);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: none;
+}

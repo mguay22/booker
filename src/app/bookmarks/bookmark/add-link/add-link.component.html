@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Add Link</h2>
+  <mat-form-field appearance="outline">
+    <mat-label>Link</mat-label>
+    <input type="text" matInput [formControl]="link" required />
+    <mat-error *ngIf="link.invalid">
+      {{ getLinkError() }}
+    </mat-error>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="addLink()">Add</button>
+</div>

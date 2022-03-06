@@ -1,0 +1,8 @@
+mutation updateBookmark($updateBookmarkData: UpdateBookmarkInput!) {
+  updateBookmark(updateBookmarkData: $updateBookmarkData) {
+    _id
+    name
+    userId
+    links
+  }
+}

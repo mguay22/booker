@@ -1,0 +1,8 @@
+query bookmarks {
+  bookmarks {
+    _id
+    name
+    userId
+    links
+  }
+}

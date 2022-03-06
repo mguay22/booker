@@ -1,0 +1,25 @@
+<ng-container *ngIf="bookmark">
+  <mat-toolbar color="primary">
+    <span>{{ bookmark.name }}</span>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="onAdd()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </mat-toolbar>
+  <div *ngIf="isLoading; else showLinks">
+    <mat-spinner class="spinner"></mat-spinner>
+  </div>
+  <ng-template #showLinks>
+    <ul class="links">
+      <li class="link" *ngFor="let link of links">
+        <mat-card (click)="onLinkClick(link.url)">
+          <mat-card-title-group>
+            <mat-card-title>{{ link.title }}</mat-card-title>
+            <mat-card-subtitle>{{ link.siteName }}</mat-card-subtitle>
+            <img src="{{ link.images[0] }}" alt="" mat-card-md-image />
+          </mat-card-title-group>
+        </mat-card>
+      </li>
+    </ul>
+  </ng-template>
+</ng-container>

@@ -1,0 +1,10 @@
+<ul class="bookmarks">
+  <li class="bookmark" *ngFor="let bookmark of bookmarks$ | async">
+    <mat-card (click)="onBookmarkClick(bookmark._id)">
+      <h3>{{ bookmark.name }}</h3>
+    </mat-card>
+  </li>
+</ul>
+<button mat-fab color="primary" class="fab" (click)="onFabClick()">
+  <mat-icon>add</mat-icon>
+</button>
